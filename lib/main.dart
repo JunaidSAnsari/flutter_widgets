@@ -12,174 +12,33 @@ void main() {
 }
 
 class ListViewDesign extends StatelessWidget {
+  List<String> months = [
+    "Jan",
+    "Feb",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "Aug",
+    "Sep",
+    "Oct",
+    "Nov",
+    "Dec"
+  ];
+  List <int> colourNo = [100,200,300,400,500,600,700,800,900,800,700,600];
+
   @override
   Widget build(BuildContext context) {
-  //ListView
-    return ListView(
-      children: [
-        Container(
-          height: 50,
-          color: Colors.amber,
-          child: Center(
-              child: Text(
-            "Jan",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.red,
-          child: Center(
-              child: Text(
-            "Feb",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.amber,
-          child: Center(
-              child: Text(
-            "Jan",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.red,
-          child: Center(
-              child: Text(
-            "Feb",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.amber,
-          child: Center(
-              child: Text(
-            "Jan",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.red,
-          child: Center(
-              child: Text(
-            "Feb",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.amber,
-          child: Center(
-              child: Text(
-            "Jan",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.red,
-          child: Center(
-              child: Text(
-            "Feb",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.amber,
-          child: Center(
-              child: Text(
-            "Jan",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.red,
-          child: Center(
-              child: Text(
-            "Feb",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.amber,
-          child: Center(
-              child: Text(
-            "Jan",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.red,
-          child: Center(
-              child: Text(
-            "Feb",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.amber,
-          child: Center(
-              child: Text(
-            "Jan",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.red,
-          child: Center(
-              child: Text(
-            "Feb",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.amber,
-          child: Center(
-              child: Text(
-            "Jan",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.red,
-          child: Center(
-              child: Text(
-            "Feb",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.amber,
-          child: Center(
-              child: Text(
-            "Jan",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-        Container(
-          height: 50,
-          color: Colors.red,
-          child: Center(
-              child: Text(
-            "Feb",
-            style: TextStyle(fontSize: 20),
-          )),
-        ),
-      ],
-    );
+    //ListView Builder
+    return ListView.builder(
+        itemCount: months.length,
+        itemBuilder: (BuildContext context, int index) {
+          return Container(
+            height: 70,
+            color: Colors.amber[colourNo[index]],
+            child: Center(child: Text("${months[index]}")),
+          );
+        });
   }
 }
