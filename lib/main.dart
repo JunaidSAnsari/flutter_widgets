@@ -1,46 +1,185 @@
 import 'package:flutter/material.dart';
 
-void main(){
-  runApp(MyApp());
+void main() {
+  runApp(MaterialApp(
+    home: Scaffold(
+      appBar: AppBar(
+        title: Text("ListView Design"),
+      ),
+      body: ListViewDesign(),
+    ),
+  ));
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
-  String studentIntro = "Empty";
+class ListViewDesign extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    debugPrint("Calling build function");
-    return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text("Statefull Widget"),),
-        body: Container(
-          child: Column(
-            children: [
-              TextField(
-                decoration: InputDecoration(
-                  labelText: "Name",
-                  hintText: "Enter Name",
-                ),
-                onSubmitted: (String text){
-                  setState((){
-                    debugPrint("Calling set state function");
-                    studentIntro = text;
-                  });
-                },
-              ),
-              Padding(
-                  padding: EdgeInsets.only(top: 30),
-                  child: Text("Student Intro: $studentIntro")),
-            ],
-          ),
+  //ListView
+    return ListView(
+      children: [
+        Container(
+          height: 50,
+          color: Colors.amber,
+          child: Center(
+              child: Text(
+            "Jan",
+            style: TextStyle(fontSize: 20),
+          )),
         ),
-      ),
+        Container(
+          height: 50,
+          color: Colors.red,
+          child: Center(
+              child: Text(
+            "Feb",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.amber,
+          child: Center(
+              child: Text(
+            "Jan",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.red,
+          child: Center(
+              child: Text(
+            "Feb",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.amber,
+          child: Center(
+              child: Text(
+            "Jan",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.red,
+          child: Center(
+              child: Text(
+            "Feb",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.amber,
+          child: Center(
+              child: Text(
+            "Jan",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.red,
+          child: Center(
+              child: Text(
+            "Feb",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.amber,
+          child: Center(
+              child: Text(
+            "Jan",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.red,
+          child: Center(
+              child: Text(
+            "Feb",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.amber,
+          child: Center(
+              child: Text(
+            "Jan",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.red,
+          child: Center(
+              child: Text(
+            "Feb",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.amber,
+          child: Center(
+              child: Text(
+            "Jan",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.red,
+          child: Center(
+              child: Text(
+            "Feb",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.amber,
+          child: Center(
+              child: Text(
+            "Jan",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.red,
+          child: Center(
+              child: Text(
+            "Feb",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.amber,
+          child: Center(
+              child: Text(
+            "Jan",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+        Container(
+          height: 50,
+          color: Colors.red,
+          child: Center(
+              child: Text(
+            "Feb",
+            style: TextStyle(fontSize: 20),
+          )),
+        ),
+      ],
     );
   }
 }
