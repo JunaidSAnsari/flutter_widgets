@@ -1,23 +1,28 @@
-import 'dart:convert';
 
 import 'package:flutter/material.dart';
-import 'package:http/http.dart' as http;
+import 'package:hello_world/second_page.dart';
 
-Future<void> main() async {
-  var url = Uri.parse('https://yashigarments.com/mobile_api.php');
-  var response = await http.get(url);
-  Map<String, dynamic> res = jsonDecode(response.body);
-
+void main () {
   runApp(MaterialApp(
-    home:Scaffold(
-      appBar: AppBar(title: Text("Http example"),),
-      body: ListTile(
-        onTap: (){},
-        leading: Icon(Icons.person),
-        title: Text(res["name"].toString()),
-        subtitle: Text("Roll No is: ${res["roll_no"].toString()}"),
-        trailing: Icon(Icons.arrow_forward),
-      )
-    ),
+    home: Navigation(),
   ));
+}
+class Navigation extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: AppBar(title: Text("Navigation"),),
+        body: Center(
+          child: ElevatedButton(
+            child: Text("Go to second page"),
+            onPressed: (){
+              Navigator.push(context, MaterialPageRoute(builder: (BuildContext context){
+                return SecondPage();
+              }));
+            },
+          ),
+        ),
+    );
+  }
 }

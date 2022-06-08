@@ -9,13 +9,15 @@ class ThirdPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(title: Text("Navigaton"),),
-        body: ElevatedButton(
-          child: Text("Go back"),
-          onPressed: (){
-            Navigator.pop(context);
-            }
-            )
+        appBar: AppBar(title: Text("Third Page"),),
+        body: Center(
+          child: ElevatedButton(
+            child: Text("Go back"),
+            onPressed: (){
+              Navigator.pop(context);
+              }
+              ),
+        )
     )
     );
   }
