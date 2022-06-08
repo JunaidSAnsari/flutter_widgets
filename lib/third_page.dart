@@ -1,26 +1,26 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(ThirdPage());
+  runApp(TabBarDesign());
 }
-class ThirdPage extends StatelessWidget {
+class TabBarDesign extends StatelessWidget {
+  const TabBarDesign({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Scaffold(
-        appBar: AppBar(title: Text("Third Page"),),
-        body: Center(
-          child: ElevatedButton(
-            child: Text("Go back"),
-            onPressed: (){
-              Navigator.pop(context);
-              }
-              ),
-        )
-    )
+      home: DefaultTabController(
+        length: 4,
+        child: Scaffold(
+          appBar: AppBar(title: Text("Tab Bar Design"),
+
+          ),
+
+        ),
+      ),
     );
   }
 }
+
 
 
